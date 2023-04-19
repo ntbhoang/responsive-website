@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  border-top: 10px solid #1098ad;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  /* short hand */
+  padding: 20px 40px;
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid green;
+  border-bottom: 5px solid green;
+  padding: 50px 0;
+
+  /*
+    equal to: 
+    - border-width
+    - border-style
+    - border-color
+    - border: 5px solid green;
+  */
+}
+
+h1 {
+  color: rgb(150, 182, 83);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+}
+
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* if we don't  want to have space at the last item in the list */
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+
+/*article header p {
+  font-style: italic;
+} 
+  - multiple ascedant selectors tight our html structure into css
+  - so, if we change html structure, css must be changed too, not so good,
+  - id selector is unique, class selector can have multiple ones
+*/
+
+#author {
+  font-style: italic;
+}
+
+#copy-right {
+  font-size: 12px;
+}
+
+.copy-right {
+  font-weight: bold;
+  font-size: 20px;
+  color: coral;
+}
+
+footer p {
+  color: chartreuse;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related {
+  list-style: none;
+}
+
+/*
+  - We mostly use `class selector` in real world project, cause we
+  are preparing for future changes, if later on we want to add a related list
+  we can use the same class selector. 
+  - If we you `id selector` we have to change the class att to id, and change the css
+  file as well, that could lead to buggy problem.
+*/
+
+/*
+  Pseudo class
+*/
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  color: red;
+}
+
+/* 
+li:nth-child(odd) {
+  color: red;
+} */
+
+/* Misconception: this won't work*/
+/* article p:first-child {
+  color: goldenrod;
+} */
+
+/* Styling links:
+  Style the anchor tag is not good, we should use pseudo class
+  to style link
+  Style links in this order 
+ */
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  text-decoration: underline orangered;
+  font-weight: bold;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
